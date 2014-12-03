@@ -33,13 +33,10 @@
 		
 		for (var index = lastPosition - 4; index < sequenciaCodigo.length; index++) {
 			var item = sequenciaCodigo[index];
-			if (item) {
-				combo += sequenciaCodigo[index];
-				console.log('array[' + index + '] = ' + item);
-			}
+			combo += item;
+			//console.log('array[' + index + '] = ' + item);
 		}
 		
-		console.log(combo);
 		return combo == codeFatality;
 	}
 
