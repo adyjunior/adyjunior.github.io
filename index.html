@@ -1,9 +1,14 @@
 <html>
 <head><title>Vila is back</title></head>
 <body>
-<div style="display: none;background-color:#8B8682;width:100%;height:100%;" id="container">
-<button style="display: none;" onclick="showTheLegend()">Click for get news</button>
+<div id="top">
+	<h2 style="text-align:center;">Make Fatality</h2>
 
+	<button onclick="$('#cueId').toggle()"><< Cue >> </button>
+	<h4 id="cueId" style="display: none;">The world's best football team.</h4>
+</div>
+
+<div style="display: none;background-color:#8B8682;width:100%;height:100%;" id="container">
 <h2 style="display: none;color:white;text-align:center;" id="titleOfLegend"></h2>
 
 <img style="
@@ -33,6 +38,7 @@ margin-left:-50px;" id="fatalityId" src="http://img1.wikia.nocookie.net/__cb2012
 		$("#fatalityId").delay(1500).fadeIn(2000);
 		$("#container").delay(1500).fadeIn(2000);
 		showTheLegend();
+		$("#top").hide();
 	}
 	
 	function isFatality() {
