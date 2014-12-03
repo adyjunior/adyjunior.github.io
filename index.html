@@ -10,12 +10,45 @@
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 <script type="text/javascript">
+	var sequenciaCodigo = new Array();
+		
+	$(document).keypress(function(e) {
+		console.log(e.which);
+		sequenciaCodigo.push(e.which);
+		
+		if(isFatality()) {
+			$("#fatalityId").delay(1500).show(2000);
+		}
+	});
+	
+//118
+//105
+//108
+//97	
+	function isFatality() {
+		if(sequenciaCodigo.length < 4) return false;
+		var codeFatality = 428;
+		var combo = 0;
+		var lastPosition = sequenciaCodigo.length;
+		
+		for (var index = lastPosition - 4; index < sequenciaCodigo.length; index++) {
+			var item = sequenciaCodigo[index];
+			if (item) {
+				combo += sequenciaCodigo[index];
+				console.log('array[' + index + '] = ' + item);
+			}
+		}
+		
+		console.log(combo);
+		return combo == codeFatality;
+	}
+
 	function showTheLegend() {
 		$('#titleOfLegend').hide();
 		$('#titleOfLegend').html('VILA IS BACK NOW IN 2015. IT\'S THE LEGEND. IT WILL BE CHAMPION.');
 		$('#titleOfLegend').show(2000);
-		$("#fatalityId").delay(1500).show(2000);
-	}	
+	}
+	
 </script>
 
 </body>
