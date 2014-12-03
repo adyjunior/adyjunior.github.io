@@ -13,7 +13,6 @@
 	var sequenciaCodigo = new Array();
 		
 	$(document).keypress(function(e) {
-		console.log(e.which);
 		sequenciaCodigo.push(e.which);
 		
 		if(isFatality()) {
@@ -21,10 +20,6 @@
 		}
 	});
 	
-//118
-//105
-//108
-//97	
 	function isFatality() {
 		if(sequenciaCodigo.length < 4) return false;
 		var codeFatality = 428;
