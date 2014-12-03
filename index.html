@@ -1,13 +1,22 @@
 <html>
 <head><title>Vila is back</title></head>
 <body>
+<div style="display: none;background-color:#8B8682;width:100%;height:100%;" id="container">
+<button style="display: none;" onclick="showTheLegend()">Click for get news</button>
 
-<button onclick="showTheLegend()">Click for get news</button>
+<h2 style="display: none;" id="titleOfLegend"></h2>
 
-<h2 id="titleOfLegend"></h2>
+<img style="
+display: none;text-align:center;
+width:200px;
+height:100px;
+position:absolute;
+top:50%;
+left:50%;
+margin-top:-50px;
+margin-left:-50px;" id="fatalityId" src="http://img1.wikia.nocookie.net/__cb20120806080609/mkwikia/images/6/6b/MKT_Fatality_Logo.gif"/>
 
-<img style="display: none;" id="fatalityId" src="http://img1.wikia.nocookie.net/__cb20120806080609/mkwikia/images/6/6b/MKT_Fatality_Logo.gif"/>
-
+</div>
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 <script type="text/javascript">
 	var sequenciaCodigo = new Array();
@@ -16,9 +25,14 @@
 		sequenciaCodigo.push(e.which);
 		
 		if(isFatality()) {
-			$("#fatalityId").delay(1500).show(2000);
+			executarFatality();
 		}
 	});
+	
+	function executarFatality() {
+		$("#fatalityId").delay(1500).fadeIn(2000);
+		$("#container").delay(1500).fadeIn(2000);
+	}
 	
 	function isFatality() {
 		if(sequenciaCodigo.length < 4) return false;
