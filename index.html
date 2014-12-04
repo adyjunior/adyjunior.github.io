@@ -23,6 +23,7 @@ margin-left:-50px;" id="fatalityId" src="http://img1.wikia.nocookie.net/__cb2012
 
 </div>
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 <script type="text/javascript">
 	var sequenciaCodigo = new Array();
 		
@@ -38,7 +39,8 @@ margin-left:-50px;" id="fatalityId" src="http://img1.wikia.nocookie.net/__cb2012
 		$("#fatalityId").delay(1500).fadeIn(2000);
 		$("#container").delay(1500).fadeIn(2000);
 		showTheLegend();
-		$("#top").hide();
+		$("#top").effect( "shake" );
+		$("#top").delay(200).fadeOut();
 	}
 	
 	function isFatality() {
