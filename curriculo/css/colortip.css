@@ -1,0 +1,129 @@
+.colorTip{
+	/* This class is assigned to the color tip span by jQuery */
+	
+	display:none;
+	position:absolute;	
+	left:50%;
+	top:-30px;
+	padding:6px;
+	z-index:999;
+	background-color:white;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:11px;
+	font-style:normal;
+	line-height:1;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:0 0 1px white;
+	white-space:nowrap;
+	
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+}
+
+.pointyTip,.pointyTipShadow{
+	/* Setting a thick transparent border on a 0x0 div to create a triangle */
+	border:6px solid transparent;
+	bottom:-12px;
+	height:0;
+	left:50%;
+	margin-left:-6px;
+	position:absolute;
+	width:0;
+}
+
+.pointyTipShadow{
+	/* The shadow tip is 1px larger, so it acts as a border to the tip */
+	border-width:7px;
+	bottom:-14px;
+	margin-left:-7px;
+}
+
+.colorTipContainer{
+	position:relative;
+	text-decoration:none !important;
+}
+
+
+/* 6 Available Color Themes */
+
+.white .pointyTip{ border-top-color:white;}
+.white .pointyTipShadow{ border-top-color:#ddd;}
+.white .colorTip{
+	background-color:white;
+	border:1px solid #DDDDDD;
+	color:#555555;
+}
+
+.yellow .pointyTip{ border-top-color:#f9f2ba;}
+.yellow .pointyTipShadow{ border-top-color:#e9d315;}
+.yellow .colorTip{
+	background-color:#f9f2ba;
+	border:1px solid #e9d315;
+	color:#5b5316;
+}
+
+.blue .pointyTip{ border-top-color:#d9f1fb;}
+.blue .pointyTipShadow{ border-top-color:#7fcdee;}
+.blue .colorTip{
+	background-color:#d9f1fb;
+	border:1px solid #7fcdee;
+	color:#1b475a;
+}
+.blue-dark .pointyTip{ border-top-color:#1B7EB3;}
+.blue-dark .pointyTipShadow{ border-top-color:#045177;}
+.blue-dark .colorTip{
+	background-color:#1B7EB3;
+	border:1px solid #045177;
+	color:#fff;
+}
+.blue-darker .pointyTip{ border-top-color:#3C5C9D;}
+.blue-darker .pointyTipShadow{ border-top-color:#1D3872;}
+.blue-darker .colorTip{
+	background-color:#3C5C9D;
+	border:1px solid #1D3872;
+	color:#fff;
+}
+.green .pointyTip{ border-top-color:#f2fdf1;}
+.green .pointyTipShadow{ border-top-color:#b6e184;}
+.green .colorTip{
+	background-color:#f2fdf1;
+	border:1px solid #b6e184;
+	color:#558221;
+}
+
+.red .pointyTip{ border-top-color:#bb3b1d;}
+.red .pointyTipShadow{ border-top-color:#8f2a0f;}
+.red .colorTip{
+	background-color:#bb3b1d;
+	border:1px solid #8f2a0f;
+	color:#fcfcfc;
+	text-shadow:none;
+}
+
+.black .pointyTip{ border-top-color:#333;}
+.black .pointyTipShadow{ border-top-color:#111;}
+.black .colorTip{
+	background-color:#333;
+	border:1px solid #111;
+	color:#fcfcfc;
+	text-shadow:none;
+}
+
+.purple .pointyTip{ border-top-color:#992EB3;}
+.purple .pointyTipShadow{ border-top-color:#6C0585;}
+.purple .colorTip{
+	background-color:#992EB3;
+	border:1px solid #6C0585;
+	color:#fff;
+}
+.orange .pointyTip{ border-top-color:#F68E20;}
+.orange .pointyTipShadow{ border-top-color:#8E4006;}
+.orange .colorTip{
+	background-color:#F68E20;
+	border:1px solid #8E4006;
+	color:#fff;
+	font-weight:bold;
+	text-shadow:none;
+}
